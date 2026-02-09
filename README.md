@@ -71,7 +71,7 @@ GoogleDrive/health-labor-ai/
 
 **macOS/Linux:**
 ```bash
-cd /path/to/repo/ai-retention
+cd /path/to/repo/health-labor-ai
 
 # Create required directories first (edit paths to your setup)
 mkdir -p "/Users/<you>/Library/CloudStorage/GoogleDrive-<account>/My Drive/health-labor-ai/data_raw"
@@ -86,7 +86,7 @@ ln -s "/Users/<you>/Library/CloudStorage/GoogleDrive-<account>/My Drive/health-l
 
 **Windows (Command Prompt):**
 ```bat
-cd /d C:\path\to\repo\ai-retention
+cd /d C:\path\to\repo\health-labor-ai
 
 REM Create required directories first (edit paths to your setup)
 mkdir "C:\Users\<USER>\GoogleDrive\health-labor-ai\data_raw"
