@@ -1,0 +1,37 @@
+# --- Python / OS ---
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+
+
+
+# Raw data (symbolic link to Dropbox)
+data_raw/
+data_raw
+
+# External storage directories (symbolic links to Dropbox)
+build/output_external_storage/
+build/output_external_storage
+explore/output_external_storage/
+analysis/output_external_storage/
+
+# Config files
+config/config.local.yaml
+config/config_example.yaml
+config/.Renviron
+
+# Log files
+build/output/logs/env_20251002_221848.txt
+
+# Toy data and outputs (local-only testing)
+data_raw_toy/
+build/output_external_storage_toy/
+build/toy
+
+# Helper files for maps
+analysis/output/*_files/

@@ -1,0 +1,9 @@
+# Single source of truth for repo-relative paths (relative to repo root)
+paths:
+  data_raw: "data_raw"
+  config: "config"
+
+  build_output: "build/output"
+  output_external_storage: "build/output_external_storage"
+  analysis_output: "analysis/output"
+
