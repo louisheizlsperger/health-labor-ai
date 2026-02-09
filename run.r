@@ -52,8 +52,6 @@ if (use_toy_data) {
 }
 
 
-data_raw_census_ipums <- file.path(data_raw, "census_ipums")
-
 analysis <- file.path(main, "analysis")
 analysis_code <- file.path(analysis, "code")
 analysis_output <- file.path(analysis, "output")

@@ -1,14 +1,16 @@
-# Exploring how AI tools may affect clinician retention and local health-labor markets (LEHD QWI + BLS QCEW)
+# Exploring how AI tools may affect clinician retention and local health-labor markets
 
-Hospitals and health systems are rapidly adopting AI tools—most visibly **ambient documentation (“AI scribes”)**, but also message drafting, coding/prior-auth automation, and operational decision support. A central hypothesis is that these tools reduce administrative burden and improve working conditions, which could translate into **higher retention (lower separations)** and **changes in hiring**. This repository builds a public-data foundation to test whether any such patterns show up at scale in **aggregate labor-market outcomes**.
+Hospitals and health systems are rapidly adopting AI tools -- most visibly **ambient documentation (“AI scribes”)**, but also message drafting, coding/prior-auth automation, and operational decision support. A central hypothesis is that these tools reduce administrative burden and improve working conditions, which could translate into **higher retention (lower separations)** and **changes in hiring**. 
 
-## What we aim to learn (high-level goal)
+## What we aim to learn first (high-level goal)
+
+Do any such patterns show up at scale in **aggregate labor-market outcomes**.
 
 1) **Do we see detectable shifts in separations, hires, employment, or wages in hospital-heavy labor markets** during the period when AI tools diffuse?  
 2) **Are changes concentrated where adoption is plausibly higher** (e.g., markets with large early-adopting systems)?  
 3) **What magnitudes are plausible in public aggregates**, and what data would we need to credibly isolate mechanisms (nurses vs physicians, specific tools, specific hospitals)?
 
-## What we do now (public-first baseline)
+## First approach
 
 We start with two official, publicly available data products:
 
@@ -18,13 +20,7 @@ We start with two official, publicly available data products:
 - **BLS QCEW (Quarterly Census of Employment and Wages)** — quarterly *employment* and *wages* by geography × industry, based on UI records.  
   Source: https://www.bls.gov/cew/downloadable-data-files.htm
 
-In the first issue, we will:
-- assemble clean county×quarter panels for **NAICS 622 (Hospitals)** (and related healthcare industries as needed),
-- build simple descriptive plots (time series, maps),
-- run lightweight “event-study style” checks around candidate adoption timing/exposure measures (initially coarse),
-- document where the public aggregates are informative vs where they clearly aren’t.
-
-## Future extensions (once the public baseline is in place)
+## Future extensions
 
 If the public data show suggestive patterns (or even if they show none), we can extend in several directions:
 
@@ -38,7 +34,7 @@ If the public data show suggestive patterns (or even if they show none), we can 
 ## Repository structure
 
 ```
-ai-retention/
+health-labor-ai/
 ├─ README.md
 ├─ .gitignore
 ├─ run.R                        # central orchestrator; defines repo-relative paths
@@ -115,34 +111,6 @@ CENSUS_API_KEY="YOUR_KEY_HERE"
 
 (Do **not** commit keys to Git.)
 
----
-
-## Data sources and what we use them for
-
-### LEHD QWI (Quarterly Workforce Indicators)
-**Use:** quarterly hires/separations + employment counts by geography × industry.
-
-- Unit: typically county (or other geography) × quarter × NAICS.
-- What we’ll focus on: **NAICS 622 (Hospitals)** (and possibly sub-industries, where available).
-- Outcomes of interest:
-  - separations (proxy for turnover),
-  - hires (replacement / growth),
-  - employment level (stock).
-
-Notes:
-- QWI is a public statistical product (not employer HR microdata). Some cells can be suppressed/noised.
-
-### BLS QCEW (Quarterly Census of Employment and Wages)
-**Use:** quarterly employment and wages by geography × industry.
-
-- Unit: county × quarter × NAICS.
-- Outcomes of interest:
-  - employment level,
-  - average weekly wage,
-  - establishment counts (where useful).
-
-Important:
-- QCEW is excellent for levels/trends, but **does not provide separations/turnover**. Use QWI for hires/separations.
 
 ---
 
@@ -155,11 +123,3 @@ Important:
   - Keep scope tight: open a draft pull request linked to the Issue.
   - Sync with `main` regularly.
   - After review, **squash-merge** and delete the branch.
-
----
-
-## References (official sources)
-
-- LEHD QWI: https://lehd.ces.census.gov/data/#qwi
-- QWI technical docs: https://lehd.ces.census.gov/doc/QWI_101.pdf
-- BLS QCEW data: https://www.bls.gov/cew/downloadable-data-files.htm
