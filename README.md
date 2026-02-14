@@ -3,7 +3,7 @@
 Hospitals and health systems are rapidly adopting AI tools -- most visibly **ambient documentation (“AI scribes”)**, but also message drafting, coding/prior-auth automation, and operational decision support. A central hypothesis is that these tools reduce administrative burden and improve working conditions, which could translate into **higher retention (lower separations)** and **changes in hiring**. 
 
 ## What we aim to learn first (high-level goal)
-
+ 
 Do any such patterns show up at scale in **aggregate labor-market outcomes**.
 
 1) **Do we see detectable shifts in separations, hires, employment, or wages in hospital-heavy labor markets** during the period when AI tools diffuse?  
