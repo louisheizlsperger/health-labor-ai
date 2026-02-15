@@ -35,3 +35,6 @@ build/toy
 
 # Helper files for maps
 analysis/output/*_files/
+
+# Environment variables
+.Renviron
